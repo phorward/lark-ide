@@ -2,11 +2,12 @@
 <html>
 <head>
 	<meta charset="UTF-8">
-	<script>
-		window.languagePluginUrl = "./pyodide/";
-	</script>
-	<script src="./pyodide/pyodide.js"></script>
-	<script src="app.js"></script>
+
+    <!-- flip comment below to use local pyodide -->
+    <script src="https://pyodide-cdn2.iodide.io/v0.15.0/full/pyodide.js"></script>
+    <!-- <script src="./pyodide/pyodide.js"></script> -->
+
+    <script src="app.js"></script>
     <style>
         .is-loading:after {
             background-image: url(is-loading.gif);
@@ -29,7 +30,7 @@
             text-align: center;
         }
 
-        textarea, body > div > ul {
+        textarea, select, body > div > ul {
             display: block;
             margin: 15px auto;
             width: 90%;
