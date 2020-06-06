@@ -45,6 +45,7 @@ class App(html5.Div):
 
 		elif html5.utils.doesEventHitWidgetOrChildren(e, self.parser):
 			self.parser = self.parser.children(self.parser["selectedIndex"])["value"]
+			self.onKeyUp()
 
 	def onKeyUp(self, e=None):
 		l = Lark(self.grammar["value"], parser=self.parser)
